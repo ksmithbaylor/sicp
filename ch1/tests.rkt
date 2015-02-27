@@ -9,6 +9,7 @@
 (run-test-suite
   (test-suite
     "Chapter 1"
+
     (test-case
       "Exercise 1.1"
       (define 1-1-expressions
@@ -29,4 +30,14 @@
               (+ 2 (if (> b a) b a))
               (* (cond ((> a b) a) ((< a b) b)
                        (else -1)) (+ a 1))))
-      (check-true (equal? 1-1 1-1-expressions)))))
+      (check-equal? 1-1 1-1-expressions))
+
+    (test-case
+      "Exercise 1.2"
+      (check-equal? 1-2 -74/300))
+
+    (test-case
+      "Exercise 1.3"
+      (check-equal? (1-3 1 2 3) 13)
+      (check-equal? (1-3 5 5 5) 50)
+      (check-equal? (1-3 0 0 0) 0))))
