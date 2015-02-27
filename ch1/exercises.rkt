@@ -1,6 +1,7 @@
 #lang planet neil/sicp
 
-(#%provide (all-defined))
+(#%provide (all-defined)
+           (all-from "base.rkt"))
 (#%require "base.rkt")
 
 ;;; Exercise 1.1 ;;;
@@ -17,3 +18,7 @@
   (if (>= a b)
     (sum-of-squares a (max b c))
     (sum-of-squares b (max a c))))
+
+;;; Exercise 1.4 ;;;
+; If b is positive, it will be added to a.
+; If b is negative, it will be subtracted from a.

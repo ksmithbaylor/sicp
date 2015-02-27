@@ -16,3 +16,6 @@
   (if (< x 0)
     (- x)
     x))
+
+(define (a-plus-abs-b a b)
+  ((if (> b 0) + -) a b))

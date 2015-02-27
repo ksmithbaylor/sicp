@@ -40,4 +40,9 @@
       "Exercise 1.3"
       (check-equal? (1-3 1 2 3) 13)
       (check-equal? (1-3 5 5 5) 50)
-      (check-equal? (1-3 0 0 0) 0))))
+      (check-equal? (1-3 0 0 0) 0))
+
+    (test-case
+      "Exercise 1.4"
+      (check-equal? (a-plus-abs-b 5 3) 8)
+      (check-equal? (a-plus-abs-b 5 -3) 8))))
