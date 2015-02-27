@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+if [ $1 = "all" ]; then
+    for chapter in $(find . -name 'ch*' -type d); do
+        echo $chapter
+        racket $chapter/tests.rkt
+    done
+else
+    racket ch$1/tests.rkt
+fi
