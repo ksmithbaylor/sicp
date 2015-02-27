@@ -2,10 +2,6 @@
 
 (#%require "../helper.rkt" "exercises.rkt")
 
-; Required for exercise 1.1
-(define a 3)
-(define b (+ a 1))
-
 (run-test-suite
   (test-suite
     "Chapter 1"
