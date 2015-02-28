@@ -95,3 +95,20 @@
 ;
 ; The procedure is still more accurate for large numbers, but it is
 ; orders of magnitude more accurate all around.
+
+
+;;; Exercise 1.8 ;;;
+(define (cube-root x)
+  (cube-root-iter 1.0 0.0 x))
+
+(define (cube-root-iter guess prev-guess x)
+  (if (1-7-good-enough? guess prev-guess)
+    guess
+    (cube-root-iter (1-8-improve guess x) guess x)))
+
+(define (1-8-improve guess x)
+  (average guess
+           (/ (+ (/ x (square guess))
+                 guess
+                 guess)
+              3)))
