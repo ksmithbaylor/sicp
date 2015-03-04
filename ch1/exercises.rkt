@@ -4,30 +4,30 @@
            (all-from "base.rkt"))
 (#%require "base.rkt")
 
-;;; Exercise 1.1 ;;;
+;;; Exercise 1.1 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define 1-1
   (list 10 12 8 3 6 3 4 19 #f 4 16 6 16))
 
 
-;;; Exercise 1.2 ;;;
+;;; Exercise 1.2 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define 1-2
   (/ (+ 5 4 (- 2 (- 3 (+ 6 4/5))))
      (* 3 (- 6 2) (- 2 7))))
 
 
-;;; Exercise 1.3 ;;;
+;;; Exercise 1.5 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define (1-3 a b c)
   (if (>= a b)
     (sum-of-squares a (max b c))
     (sum-of-squares b (max a c))))
 
 
-;;; Exercise 1.4 ;;;
+;;; Exercise 1.4 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; If b is positive, it will be added to a.
 ; If b is negative, it will be subtracted from a.
 
 
-;;; Exercise 1.5 ;;;
+;;; Exercise 1.5 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; If the interpreter is using applicative-order execution,
 ; the procedure will never terminate. If the interpreter
 ; is using normal-order execution, the procedure will
@@ -42,7 +42,7 @@
 ; evaluate `(p)`.
 
 
-;;; Exercise 1.6 ;;;
+;;; Exercise 1.6 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; The program will never terminate. Similar to the previous
 ; example, since the interpreter uses applicative-order
 ; execution, it will attempt to evaluate the else-clause
@@ -52,7 +52,7 @@
 ; stack.
 
 
-;;; Exercise 1.7 ;;;
+;;; Exercise 1.7 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Since the interval we define as "good enough" stays constant
 ; and does not scale with the size of `x`, it is proportionally
 ; bigger for small numbers, leaving a bigger margin for error.
@@ -97,7 +97,7 @@
 ; orders of magnitude more accurate all around.
 
 
-;;; Exercise 1.8 ;;;
+;;; Exercise 1.8 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define (cube-root x)
   (cube-root-iter 1.0 0.0 x))
 
@@ -113,7 +113,8 @@
                  guess)
               3)))
 
-;;; Exercise 1.9 ;;;
+
+;;; Exercise 1.9 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; First
 ; (define (+ a b)
 ;   (if (= a 0)
