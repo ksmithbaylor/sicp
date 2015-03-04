@@ -8,6 +8,8 @@
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (test-case "Exercise 1.1"
+               (define a 3)
+               (define b (+ a 1))
                (define 1-1-expressions
                  (list 10
                        (+ 5 3 4)

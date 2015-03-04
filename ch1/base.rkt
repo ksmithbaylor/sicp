@@ -17,10 +17,6 @@
     (- x)
     x))
 
-; Required for exercise 1.1
-(define a 3)
-(define b (+ a 1))
-
 (define (a-plus-abs-b a b)
   ((if (> b 0) + -) a b))
 
