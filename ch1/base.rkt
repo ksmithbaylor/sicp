@@ -1,6 +1,6 @@
-#lang planet neil/sicp
+#lang racket
 
-(#%provide (all-defined))
+(provide (all-defined-out))
 
 (define (square x) (* x x))
 

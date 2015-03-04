@@ -1,6 +1,6 @@
-#lang planet neil/sicp
+#lang racket
 
-(#%require "../helper.rkt" "exercises.rkt")
+(require "../helper.rkt" "exercises.rkt")
 
 (run-test-suite
   (test-suite

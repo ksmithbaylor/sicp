@@ -1,8 +1,8 @@
-#lang planet neil/sicp
+#lang racket
 
-(#%provide (all-defined)
-           (all-from "base.rkt"))
-(#%require "base.rkt")
+(provide (all-defined-out)
+         (all-from-out "base.rkt"))
+(require "base.rkt")
 
 ;;; Exercise 1.1 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define 1-1
