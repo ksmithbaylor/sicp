@@ -68,4 +68,12 @@
     (test-case "Exercise 1.9"
                (tests-not-needed))
 
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    (test-case "Exercise 1.10"
+               (define 1-10-expressions
+                 (list (A 1 10)
+                       (A 2 4)
+                       (A 3 3)))
+               (check-equal? 1-10 1-10-expressions))
+    
     ))
