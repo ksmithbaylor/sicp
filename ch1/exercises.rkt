@@ -85,7 +85,7 @@
     (1-7-sqrt-iter (improve guess x) guess x)))
 
 (define (1-7-good-enough? guess prev-guess)
-  (> 0.001 (/ guess (- guess prev-guess))))
+  (> 0.001 (/ (abs (- guess prev-guess)) guess)))
 
 ; This improves the accuracy quite a bit. Using our new function:
 ; > (/ (1-7-sqrt 2.25) (- (1-7-sqrt 2.25) 1.5))
@@ -109,8 +109,7 @@
 (define (1-8-improve guess x)
   (average guess
            (/ (+ (/ x (square guess))
-                 guess
-                 guess)
+                 (* 2 guess))
               3)))
 
 

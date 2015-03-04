@@ -1,8 +1,6 @@
 #lang planet neil/sicp
 
-(#%provide writeln
-           displayln
-           run-test-suite
+(#%provide (all-defined)
            (all-from (planet schematics/schemeunit:3:5))
            (all-from (planet schematics/schemeunit:3:5/text-ui)))
 
@@ -21,3 +19,6 @@
   (if (= 0 (run-tests suite))
     (displayln "All tests passed!")
     (displayln "One or more failures :(")))
+
+(define-simple-check (tests-not-needed)
+  #t)
