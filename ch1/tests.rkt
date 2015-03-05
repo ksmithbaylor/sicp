@@ -74,6 +74,11 @@
                  (list (A 1 10)
                        (A 2 4)
                        (A 3 3)))
-               (check-equal? 1-10 1-10-expressions))
-    
-    ))
+               (check-equal? 1-10 1-10-expressions)
+
+               (define (f n) (A 0 n))
+               (define (g n) (A 1 n))
+               (define (h n) (A 2 n))
+               (check-equal? (map f (range 5)) (map 1-10-f (range 5)))
+               (check-equal? (map g (range 5)) (map 1-10-g (range 5)))
+               (check-equal? (map h (range 5)) (map 1-10-h (range 5))))))

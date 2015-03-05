@@ -3,6 +3,8 @@
 (provide (all-defined-out)
          (all-from-out "base.rkt"))
 (require "base.rkt")
+(require (only-in srfi/1
+                  reduce))
 
 ;;; Exercise 1.1 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define 1-1
@@ -240,3 +242,16 @@
 ; Test that the values are correct
 (define 1-10
   '(1024 65536 65536))
+
+; (A 0 n) describes multiplication by 2.
+(define (1-10-f n)
+  (* 2 n))
+
+; (A 1 n) describes exponentiation base 2.
+(define (1-10-g n)
+  (if (= n 0) 0 (expt 2 n)))
+
+; (A 2 n) is describing tetration base 2. Tetration is the next
+; hyper operator after exponentiation.
+(define (1-10-h n)
+  (reduce expt 0 (make-list n 2)))
