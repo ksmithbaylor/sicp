@@ -255,3 +255,21 @@
 ; hyper operator after exponentiation.
 (define (1-10-h n)
   (reduce expt 0 (make-list n 2)))
+
+
+;;; Exercise 1.11 ;;;
+; n if n < 3
+; f(n−1) + 2f(n−2) + 3f(n−3) if n ≥ 3
+(define (1-11-r n)
+  (if (< n 3)
+    n
+    (+ (* 1 (1-11-r (- n 1)))
+       (* 2 (1-11-r (- n 2)))
+       (* 3 (1-11-r (- n 3))))))
+
+(define (1-11-i n)
+  (define (iter n a b c)
+    (if (= n 0)
+      a
+      (iter (- n 1) b c (+ c b b a a a))))
+  (iter n 0 1 2))

@@ -56,13 +56,15 @@
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (test-case "Exercise 1.7"
                ; Make sure the 1-7-sqrt is more accurate than the original one
-               (check > (- (sqrt 2.25) 1.5)
-                        (- (1-7-sqrt 2.25) 1.5)))
+               (check >
+                      (- (sqrt 2.25) 1.5)
+                      (- (1-7-sqrt 2.25) 1.5)))
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (test-case "Exercise 1.8"
-               (check < (- (cube-root 3.375) 1.5)
-                        0.001))
+               (check <
+                      (- (cube-root 3.375) 1.5)
+                      0.001))
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (test-case "Exercise 1.9"
@@ -81,4 +83,13 @@
                (define (h n) (A 2 n))
                (check-equal? (map f (range 5)) (map 1-10-f (range 5)))
                (check-equal? (map g (range 5)) (map 1-10-g (range 5)))
-               (check-equal? (map h (range 5)) (map 1-10-h (range 5))))))
+               (check-equal? (map h (range 5)) (map 1-10-h (range 5))))
+
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    (test-case "Exercise 1.11"
+               (check-equal? (map 1-11-r '(0 1 2)) '(0 1 2))
+               (check-equal? (map 1-11-i '(0 1 2)) '(0 1 2))
+               (check-equal? (map 1-11-r (range 0 20))
+                             (map 1-11-i (range 0 20))))
+
+    ))
